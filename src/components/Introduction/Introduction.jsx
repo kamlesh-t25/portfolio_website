@@ -6,9 +6,9 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Introduction = () => {
   return (
-    <div id='introduction' className='introduction-main  font-sans bg-[#eceff1] flex flex-col justify-center items-center'>
+    <div id='introduction' className='introduction-main w-full  font-sans bg-[#eceff1] flex flex-col justify-center items-center'>
         <div className='h-fit flex justify-center items-center flex-col  m-auto'>
-          <p className='text-[#111111] font-bold text-[50px] text-center'>HEY, I'M KAMLESH TAKHAR</p> <br />
+          <p className='text-[#111111] font-bold text-[35px] lg:text-[50px] text-center'>HEY, I'M KAMLESH TAKHAR</p> <br />
           <p className='text-center px-5 text-[#333333] w-[650px] break-words opacity-80 '>A result-oriented <span className='font-bold'>Full Stack Web Developer</span>, building and managing end-to-end websites and web applications that drive the overall success of the product.</p>
           <div className="social-platform-links mt-[25px] w-full flex justify-center p-4 gap-[25px]">
             <a href="https://www.linkedin.com/in/kamlesh-takhar-53921126a/">

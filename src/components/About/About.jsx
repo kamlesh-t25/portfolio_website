@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div id='about-container' className='flex flex-col justify-start items-center gap-[20px] p-[10px] w-screen bg-[#FAFAFA] h-fit py-16'>
+    <div id='about-container' className='flex flex-col justify-start items-center gap-[20px] p-[10px] w-screen bg-[#FAFAFA] h-fit py-[65px]'>
       {/* <> */}
       <div className="flex flex-col justify-center items-center ">
           <h1 className='tracking-wide text-[30px] font-bold '>ABOUT ME</h1>
@@ -27,16 +27,16 @@ const About = () => {
               and experience, feel free to reach out!
         </p>
         <a href="#contact">
-          <p className='px-[20px] py-[12px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold '>Contact</p>
+          <p className='px-[30px] py-[10px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold '>Contact</p>
         </a>
         </div>
 
         <div className="flex flex-col w-fit float-right min-w-[300px]">
-                <h1 className='text-[20px] font-bold tracking-wide ml-3'>MY SKILLS</h1>
+                <h1 className='text-[20px] font-bold tracking-wide'>MY SKILLS</h1>
             <div className="skill-icons  mt-3">
                 {["HTML","CSS","TAILWIND CSS","BOOTSTRAP","JAVASCRIPT","REACT.JS","NODE.JS","EXPRESS.JS","WEBSOCKET","RESTFUL API","MONGODB","MYSQL","GITHUB"].map((item,index)=>{
                   return (
-                    <button className='px-6 py-3 bg-[#E7E7E7] font-semibold mx-3 my-2 opacity-70 rounded-[10px] ' key={index}>{item}</button>
+                    <button className='px-6 py-3 bg-[#E7E7E7] font-semibold mr-3 my-2 opacity-70 rounded-[10px] ' key={index}>{item}</button>
                   )
                 })}
             </div>

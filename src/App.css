@@ -35,7 +35,19 @@
 
 .right-header{
     display: flex;
-    gap: 30px;
+    gap: 26px;
+}
+
+.visible-navigation-bar{
+    padding-top: 50px;
+    z-index: 10;
+    color: white;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* line-height: 50px; */
+    width: 100vw;
+    height: 100vh;
 }
 
 .right-header a{
