@@ -42,10 +42,10 @@ const Projects = () => {
         </div>
 
         <div className="project flex gap-[50px] flex-row flex-wrap py-6  justify-center w-4/5 items-center">
-          <div className="left-project flex justify-center items-center w-fit lg:w-fit  p-4 ">
+          <div className="left-project flex justify-center items-center w-fit lg:w-fit bg-[#ECECEC]  p-4 ">
             <img width={350} height={350} src={groupChatImg} alt="" />
           </div>
-          <div className="right-project flex flex-col items-center w-[500px] lg:items-start lg:w-[500px] bg-[#ECECEC]  p-4 ">
+          <div className="right-project flex flex-col items-center w-[500px] lg:items-start lg:w-[500px]   p-4 ">
             <p className='mb-4 cursor-pointer hover:text-[#e94343] tracking-wide font-bold text-[25px] lg:text-center '>Group Chat Website </p>
             <p className='text-[17px] opacity-85 leading-relaxed '>Developed a real-time group chat application where users can join chat rooms and exchange messages. Messages are available only during the session and are not stored.</p>
             <p className='flex gap-5'>
