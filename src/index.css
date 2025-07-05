@@ -6,3 +6,40 @@
 html{
     scroll-behavior: smooth;
 }
+
+.app-div{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry(0);
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+i{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #e9439c;
+    animation: animate 2s linear forwards;
+}
+
+
+@keyframes animate{
+    0%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(var(--x),var(--y));
+    }
+}

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { FaBars } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({active}) => {
+  console.log("AA :",active);
+  
   const [isVisible,setVisible]=useState(false);
   return (
   <>
@@ -22,7 +24,7 @@ const Header = () => {
     </div>
       {
           isVisible && 
-          <div className="flex visible-navigation-bar fixed top-[10vh] md:hidden flex-col bg-black ">
+          <div className="flex visible-navigation-bar fixed top-[7vh] md:hidden flex-col bg-black ">
             <div onClick={()=>setVisible((prev)=>!prev)} className="h-1/3  flex flex-col justify-between items-center font-bold tracking-wide overflow-hidden ">
             <a href="#">HOME</a>
             <a href="#about-container">ABOUT</a>
