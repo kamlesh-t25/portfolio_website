@@ -43,3 +43,32 @@ i{
         transform: translate(var(--x),var(--y));
     }
 }
+
+
+.loader {
+  height: 8px;
+  width: 140px;
+  border-radius: 10px;
+  --c: no-repeat linear-gradient(#6100ee 0 0);
+  background: var(--c), var(--c), #d7b8fc;
+  background-size: 60% 100%;
+  animation: l16 3s infinite, glow 1.5s ease-in-out infinite alternate;
+  box-shadow: 0 0 10px #6100ee44; /* soft glow */
+}
+
+@keyframes l16 {
+  0%   { background-position: -150% 0, -150% 0; }
+  66%  { background-position: 250% 0, -150% 0; }
+  100% { background-position: 250% 0, 250% 0; }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 6px #6100ee33, 0 0 12px #6100ee22;
+    filter: brightness(0.95);
+  }
+  100% {
+    box-shadow: 0 0 12px #6100eeaa, 0 0 20px #6100ee77;
+    filter: brightness(2.2);
+  }
+}

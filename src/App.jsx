@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loader from './components/Loader.jsx'
 
 function App() {
   // useEffect(()=>{
@@ -16,6 +17,13 @@ function App() {
   // },[])
 
   const [activeSection, setActiveSection] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  // Show loader for 1.5s
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll('section'); // Use <section> tags
@@ -34,24 +42,24 @@ function App() {
     return () => sections.forEach(section => observer.unobserve(section));
   }, []);
 
-  useEffect(() => {
-    console.log("AA2 :", activeSection);
 
-  }, [activeSection])
+
+
 
   return (
     <>
       <ToastContainer />
-      <div className="w-full overflow-x-hidden font-sans app">
-        <Header active={activeSection} />
-        <div className='bg-[#eceff1] '>
-          <section id="introduction"><Introduction /></section>
-          <section id="about-container"><About /></section>
-          <section id="projects-container"><Projects /></section>
-          <section id="contact"><Contact /></section>
-        </div>
-        <Footer />
-      </div>
+      {loading ? <Loader /> :
+        <div className="w-full overflow-x-hidden font-sans app">
+          <Header active={activeSection} />
+          <div className='bg-[#eceff1] '>
+            <section id="introduction"><Introduction /></section>
+            <section id="about-container"><About /></section>
+            <section id="projects-container"><Projects /></section>
+            <section id="contact"><Contact /></section>
+          </div>
+          <Footer />
+        </div>}
     </>
   )
 }

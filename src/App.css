@@ -22,14 +22,14 @@
     align-items: center;
 }
 
-.header .left-header h4{
+.header .left-header a{
     font-weight: bold;
     /* color: black; */
     font-size: 16px;
     cursor: pointer;
 }
 
-.header .left-header h4:hover{
+.header .left-header a:hover{
     color: rgb(206, 208, 113);
 }
 
