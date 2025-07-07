@@ -5,6 +5,12 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    cursor: crosshair;
+}
+
+#root{
+  overflow-x: hidden;
 }
 
 .app-div{
@@ -26,9 +32,10 @@ html{
 
 i{
     position: absolute;
+    pointer-events: none;
     width: 4px;
     height: 4px;
-    background: #e9439c;
+    /* background: #e9439c; */
     animation: animate 2s linear forwards;
 }
 
