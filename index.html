@@ -21,7 +21,7 @@
 
         i.style.background = getRandomColor();
 
-        document.body.appendChild(i);
+        //document.body.appendChild(i);
 
         setTimeout(() => {
           document.body.removeChild(i);
@@ -35,7 +35,8 @@
         const h = Math.floor(Math.random() * 360);
         const s = 70 + Math.random() * 30;
         const l = 50 + Math.random() * 10;
-        return `hsl(${h}, ${s}%, ${l}%)`;
+        //return `hsl(${h}, ${s}%, ${l}%)`;
+        return "#bf4d63";
       };
 
       document.addEventListener("mousemove", spark);
