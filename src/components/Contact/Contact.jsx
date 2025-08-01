@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
@@ -9,40 +9,102 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {
-        publicKey: import.meta.env.VITE_PUBLIC_KEY,
-      })
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
-          toast.success("Email sent successfully ");
-          console.log('SUCCESS!');
+          toast.success('Email sent successfully');
+          form.current.reset();
         },
         (error) => {
           console.log('FAILED...', error.text);
-        },
+        }
       );
-  }
+  };
+
   return (
-    <div className='contact-container flex flex-col justify-center items-center py-[70px]' id='contact'>
-      <div className="">
-        <div className="flex flex-col mb-2 items-center">
-          <h1 className="tracking-wide text-[30px] font-bold">Contact Me</h1>
-          <div className="w-44 h-2 mt-2 bg-black rounded-full"></div>
+    <div
+      className="contact-container bg-gradient-to-b from-white to-gray-100 py-20 flex flex-col items-center justify-center"
+      id="contact"
+    >
+      {/* Heading */}
+      <div className="w-full px-4 max-w-3xl  mb-12">
+        <div className="w-full mb-6 max-w-4xl flex flex-col items-start">
+          <h1 className="text-4xl font-extrabold text-gray-900 tracking-wide mb-2">My Projects</h1>
+          <div className="w-60 h-1 bg-[#7843E9] rounded-full"></div>
         </div>
+        <p className="mt-4 text-gray-600 text-lg">
+          I'd love to hear from you! Fill out the form and I'll get back to you as soon as possible.
+        </p>
       </div>
-      <div className=" w-4/5 md:w-3/6 my-10 mb-16 rounded-lg bg-white h-fit font-serif ">
-        <form action="" ref={form} onSubmit={submitHandler} className='flex flex-col p-10'>
-          <label htmlFor="name" className='font-[8px]'><span className='text-[14px]'>Name</span></label>
-          <input type="text" placeholder='Enter your name' name="from_name" id="name" className='bg-[#F0F0F0] p-3 h-[55px] rounded-[10px] mb-8 mt-1 ' />
-          <label htmlFor="email" className='font-[8px]'><span className='text-[14px]'>Email</span></label>
-          <input type="email" placeholder='Enter your email' name="from_email" id="email" className='bg-[#F0F0F0] p-3 h-[55px] rounded-[10px] mb-8 mt-1 ' />
-          <label htmlFor="message" className='font-[8px]'><span className='text-[14px]'>Message</span></label>
-          <textarea name="message" placeholder='Enter your message' id="message" className='bg-[#F0F0F0] p-3 h-[150px] rounded-[10px] mb-8 mt-1 resize-none '></textarea>
-          <button className='py-[15px] px-[50px] text-white font-bold text-[16px] w-max bg-[#7843E9] rounded-lg ' type="submit">SUBMIT</button>
+
+      {/* Form */}
+      <div className="w-full max-w-2xl bg-white shadow-xl rounded-2xl px-10 py-12">
+        <form ref={form} onSubmit={submitHandler} className="flex flex-col gap-6">
+          {/* Name */}
+          <div className="flex flex-col">
+            <label htmlFor="name" className="text-sm text-gray-700 mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              name="from_name"
+              id="name"
+              placeholder="Enter your name"
+              className="p-4 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7843E9]"
+              required
+            />
+          </div>
+
+          {/* Email */}
+          <div className="flex flex-col">
+            <label htmlFor="email" className="text-sm text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              name="from_email"
+              id="email"
+              placeholder="Enter your email"
+              className="p-4 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7843E9]"
+              required
+            />
+          </div>
+
+          {/* Message */}
+          <div className="flex flex-col">
+            <label htmlFor="message" className="text-sm text-gray-700 mb-1">
+              Message
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Enter your message"
+              className="p-4 bg-gray-100 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[#7843E9]"
+              required
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <div className="flex justify-center mt-6">
+            <button
+              type="submit"
+              className="bg-[#7843E9] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6930d4] transition duration-300"
+            >
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

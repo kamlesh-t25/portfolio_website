@@ -10,36 +10,36 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
-      const spark = (event) => {
-        let i = document.createElement("i");
-        i.style.left = event.pageX + "px";
-        i.style.top = event.pageY + "px";
+      // const spark = (event) => {
+        // let i = document.createElement("i");
+        // i.style.left = event.pageX + "px";
+        // i.style.top = event.pageY + "px";
 
-        i.style.scale = `${Math.random() * 2 + 1}`;
-        i.style.setProperty("--x", getTransitionValue());
-        i.style.setProperty("--y", getTransitionValue());
+        // i.style.scale = `${Math.random() * 2 + 1}`;
+        // i.style.setProperty("--x", getTransitionValue());
+        // i.style.setProperty("--y", getTransitionValue());
 
-        i.style.background = getRandomColor();
+        // i.style.background = getRandomColor();
 
         //document.body.appendChild(i);
 
-        setTimeout(() => {
-          document.body.removeChild(i);
-        }, 2000);
-      };
+        // setTimeout(() => {
+        //   document.body.removeChild(i);
+        // }, 2000);
+      // };
 
-      const getTransitionValue = () => {
-        return `${Math.random() * 400 - 200}px`;
-      };
-      const getRandomColor = () => {
-        const h = Math.floor(Math.random() * 360);
-        const s = 70 + Math.random() * 30;
-        const l = 50 + Math.random() * 10;
-        //return `hsl(${h}, ${s}%, ${l}%)`;
-        return "#bf4d63";
-      };
+      // const getTransitionValue = () => {
+      //   return `${Math.random() * 400 - 200}px`;
+      // };
+      // const getRandomColor = () => {
+      //   const h = Math.floor(Math.random() * 360);
+      //   const s = 70 + Math.random() * 30;
+      //   const l = 50 + Math.random() * 10;
+      //   //return `hsl(${h}, ${s}%, ${l}%)`;
+      //   return "#bf4d63";
+      // };
 
-      document.addEventListener("mousemove", spark);
+      // document.addEventListener("mousemove", spark);
     </script>
   </body>
 </html>

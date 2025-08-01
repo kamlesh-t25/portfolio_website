@@ -10,6 +10,8 @@ import Footer from './components/Footer'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from './components/Loader.jsx'
+import { BrowserRouter } from 'react-router-dom'
+import Skills from './components/Skills/Skills.jsx'
 
 function App() {
   // useEffect(()=>{
@@ -49,17 +51,20 @@ function App() {
   return (
     <>
       <ToastContainer />
-      {loading ? <Loader /> :
-        <div className="w-full overflow-x-hidden font-sans app">
-          <Header active={activeSection} />
-          <div className='bg-[#eceff1] '>
-            <section id="introduction"><Introduction /></section>
-            <section id="about-container"><About /></section>
-            <section id="projects-container"><Projects /></section>
-            <section id="contact"><Contact /></section>
-          </div>
-          <Footer />
-        </div>}
+      <BrowserRouter>
+        {loading ? <Loader /> :
+          <div className="w-full overflow-x-hidden font-sans app">
+            <Header active={activeSection} />
+            <div className='bg-[#eceff1] '>
+              <section id="introduction"><Introduction /></section>
+              <section id="about-container"><About /></section>
+              <section id="skills-container"><Skills/></section>
+              <section id="projects-container"><Projects /></section>
+              <section id="contact"><Contact /></section>
+            </div>
+            {/* <Footer /> */}
+          </div>}
+      </BrowserRouter>
     </>
   )
 }

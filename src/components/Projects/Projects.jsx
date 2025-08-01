@@ -1,73 +1,95 @@
 import React from 'react'
-import libraryImg from '../../assets/library_login.png'
-import restaurantImg from '../../assets/tomato-restaurant.png'
-import whatshappClone from '../../assets/whatshapp_clone.png'
-import groupChatImg from '../../assets/chat_group.png'
+import { FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
+
+const projects = [
+  {
+    name: 'Library Management System - User Panel',
+    stack: 'React.js, Node.js, Express, MongoDB',
+    desc: 'A full-stack system where users can seamlessly browse, borrow, and return books with real-time inventory updates. It ensures deadline tracking and borrowing restrictions using RESTful APIs and session-based logic.',
+    links: {
+      view: 'https://library-student.onrender.com/',
+      github: 'https://github.com/kamlesh-t25/Library',
+    }
+  },
+  {
+    name: 'Library Management System - Admin Panel',
+    stack: 'React.js, Node.js, Express, MongoDB',
+    desc: 'An admin dashboard to manage book inventory, track user activities, and handle overdue returns. It uses secure CRUD operations, server-side filtering, and role-based access control.',
+    links: {
+      view: 'https://library-admin-panel.onrender.com/',
+      github: 'https://github.com/kamlesh-t25/Library',
+    }
+  },
+  {
+    name: 'Restaurant Ordering Platform - User Panel',
+    stack: 'React.js, Node.js, Express, MongoDB, Stripe API',
+    desc: 'An online food ordering system that allows customers to browse dishes, place orders, make payments, and track order status with a dynamic and responsive interface.',
+    links: {
+      view: 'https://tomato-restaurant.onrender.com/',
+      github: 'https://github.com/kamlesh-t25/RestaurantWebApp',
+    }
+  },
+  {
+    name: 'Restaurant Ordering Platform - Admin Panel',
+    stack: 'React.js, Node.js, Express, MongoDB',
+    desc: 'Admin interface for tracking live orders, managing menu items, and updating delivery statuses. Uses protected routes and dashboards for operational efficiency.',
+    links: {
+      view: 'https://tomato-adminpanel-0u1v.onrender.com/',
+      github: 'https://github.com/kamlesh-t25/RestaurantWebApp',
+    }
+  },
+  {
+    name: 'Group Chat Application',
+    stack: 'React.js, Node.js, Express, Socket.io',
+    desc: 'A real-time group chat platform where users can join rooms and exchange live messages via WebSocket. No message persistence; focused on transient communication.',
+    links: {
+      view: 'https://ichat-room-user.onrender.com/',
+      github: 'https://github.com/kamlesh-t25/ichat-room',
+    }
+  },
+  // Add more if needed
+];
 
 const Projects = () => {
   return (
-    <div className="py-[75px] min-h-screen font-serif projects-main">
-      <div className="flex flex-col  items-center">
-        <h1 className="tracking-wide text-[30px] font-bold">My Projects</h1>
-        <div className="w-48 h-2 mt-2 bg-black rounded-full"></div>
-      </div>      <div className='project-main w-full flex flex-col justify-center items-center gap-[30px]'>
-        <div className="project flex gap-[50px] flex-row flex-wrap py-6  justify-center w-4/5 items-center">
-          <div className="left-project flex justify-center items-center w-fit lg:w-fit bg-[#ECECEC]  p-4 ">
-            <img width={450} height={450} className='  '
-              src={libraryImg} alt="" />
-          </div>
-          <div className="right-project flex flex-col items-center w-[500px] lg:items-start lg:w-[500px]  p-4 ">
-            <p className='mb-4 cursor-pointer hover:text-[#e94343] tracking-wide font-bold text-[25px] lg:text-center '> Online Library Management Website </p>
-            <p className='text-[17px] opacity-85 leading-relaxed '>Built a library management system with admin and user panels.
-              The admin panel handles inventory and user records, while the user panel allows seamless book borrowing and
-              returning, ensuring efficient management of book availability and deadlines.</p>
-            <p className='flex gap-5'>
-              <button className='px-[30px] py-[10px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold hover:bg-slate-400 hover:text-black'><a href="https://library-student.onrender.com/">User Panel</a></button>
-              <button className='px-[30px] py-[10px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold hover:bg-slate-400 hover:text-black'><a href="https://library-student.onrender.com/">Admin Panel</a></button>
-            </p>
-          </div>
-        </div>
+    <div className="py-[75px] min-h-screen bg-white font-serif px-6 flex flex-col items-center">
+      {/* Header */}
+      <div className="w-full mb-6 max-w-4xl flex flex-col items-start">
+        <h1 className="text-4xl font-extrabold text-gray-900 tracking-wide mb-2">My Projects</h1>
+        <div className="w-60 h-1 bg-[#7843E9] rounded-full"></div>
+      </div>
 
-        <div className="project flex gap-[50px] flex-row flex-wrap py-6  justify-center w-4/5 items-center">
-          <div className="left-project flex justify-center items-center w-fit lg:w-fit bg-[#ECECEC]  p-4 ">
-            <img width={350} height={350} src={restaurantImg} alt="" />
-          </div>
-          <div className="right-project flex flex-col items-center w-[500px] lg:items-start lg:w-[500px]  p-4 ">
-            <p className='mb-4 cursor-pointer hover:text-[#e94343] tracking-wide font-bold text-[25px] lg:text-center '> Online Restaurant Order Platform </p>
-            <p className='text-[17px] opacity-85 leading-relaxed '>Created a platform for users to browse food categories,
-              place orders, pay online, and track their order status. Developed an admin panel to track and manage orders and oversee delivery operations.</p>
-            <p className='flex gap-5'>
-              <button className='px-[30px] py-[10px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold hover:bg-slate-400 hover:text-black'><a href="https://tomato-restaurant.onrender.com/">User Panel</a></button>
-              <button className='px-[30px] py-[10px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold hover:bg-slate-400 hover:text-black'><a href="https://tomato-adminpanel-0u1v.onrender.com/">Admin Panel</a></button>
-            </p>
-          </div>
-        </div>
+      {/* Projects List */}
+      <div className="flex flex-col gap-10 w-full max-w-5xl">
+        {projects.map((project, index) => (
+          <div key={index} className="p-6 rounded-xl bg-white shadow-md hover:shadow-xl transition-shadow duration-300">
+            <h2 className="text-xl font-bold text-gray-800 mb-1">{project.name}</h2>
+            <p className="text-sm font-semibold text-gray-600 mb-4">{project.stack}</p>
+            <p className="text-[16px] text-gray-700 leading-relaxed mb-4">{project.desc}</p>
+            <div className="flex justify-between gap-4">
+              <a
+                href={project.links.view}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#7843E9] font-bold flex gap-2 items-center "
+              >
+                View Project
+                <FaLink />
 
-        <div className="project flex gap-[50px] flex-row flex-wrap py-6  justify-center w-4/5 items-center">
-          <div className="left-project flex justify-center items-center w-fit lg:w-fit bg-[#ECECEC]  p-4 ">
-            <img width={350} height={350} src={groupChatImg} alt="" />
+              </a>
+              <a
+                href={project.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" flex gap-2 items-center font-bold text-[#7843E9] "
+              >
+                GitHub
+                <FaGithub />
+              </a>
+            </div>
           </div>
-          <div className="right-project flex flex-col items-center w-[500px] lg:items-start lg:w-[500px]   p-4 ">
-            <p className='mb-4 cursor-pointer hover:text-[#e94343] tracking-wide font-bold text-[25px] lg:text-center '>Group Chat Website </p>
-            <p className='text-[17px] opacity-85 leading-relaxed '>Developed a real-time group chat application where users can join chat rooms and exchange messages. Messages are available only during the session and are not stored.</p>
-            <p className='flex gap-5'>
-              <button className='px-[30px] py-[10px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold hover:bg-slate-400 hover:text-black'><a href="https://ichat-room-user.onrender.com/">Visit Website</a></button>
-            </p>
-          </div>
-        </div>
-
-        {/* <div className="project flex gap-[50px] flex-row flex-wrap py-6  justify-center w-4/5 items-center">
-          <div className="left-project flex justify-center items-center w-fit lg:w-fit bg-[#ECECEC]  p-4 ">
-            <img width={350} height={350} src={whatshappClone} alt="" />
-          </div>
-          <div className="right-project flex flex-col items-center w-[500px] lg:items-start lg:w-[500px]  p-4 ">
-            <p className='mb-4 cursor-pointer hover:text-[#e94343] tracking-wide font-bold text-[25px] lg:text-center '>WhatsApp Clone </p>
-            <p className='text-[17px] opacity-85 leading-relaxed '>Developed a real-time chat application using WebSocket, emulating WhatsApp's functionality. Users can send instant messages and share files such as images and documents. The app focuses on real-time communication with seamless user interactions.</p>
-            <p className='flex gap-5'>
-                <button className='px-[30px] py-[10px] bg-[#7843E9] rounded-[10px] w-fit mt-5 text-white font-bold hover:bg-slate-400 hover:text-black'><a href="https://chat-app-1-56g5.onrender.com/....chat">Visit Website</a></button>
-            </p>
-          </div>
-        </div> */}
+        ))}
       </div>
     </div>
   )
