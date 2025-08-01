@@ -41,10 +41,10 @@ const Introduction = () => {
             <span className='font-[300]'>github.com/kamlesh-t25</span>
           </a>
 
-          <a href="https://leetcode.com/u/kamlesh_takhar/" target="_blank" className="flex items-center gap-2 hover:text-blue-600">
+          {/* <a href="https://leetcode.com/u/kamlesh_takhar/" target="_blank" className="flex items-center gap-2 hover:text-blue-600">
             <SiLeetcode className='text-[#7843E9]' size={22} />
             <span className='font-[300]'>leetcode.com/u/kamlesh_takhar</span>
-          </a>
+          </a> */}
         </div>
 
         <a href="#projects-container">

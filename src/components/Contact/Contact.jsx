@@ -36,7 +36,7 @@ const Contact = () => {
       {/* Heading */}
       <div className="w-full px-4 max-w-3xl  mb-12">
         <div className="w-full mb-6 max-w-4xl flex flex-col items-start">
-          <h1 className="text-4xl font-extrabold text-gray-900 tracking-wide mb-2">My Projects</h1>
+          <h1 className="text-4xl font-extrabold text-gray-900 tracking-wide mb-2">Contact me</h1>
           <div className="w-60 h-1 bg-[#7843E9] rounded-full"></div>
         </div>
         <p className="mt-4 text-gray-600 text-lg">
