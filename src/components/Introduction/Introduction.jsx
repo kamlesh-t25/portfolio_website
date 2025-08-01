@@ -20,10 +20,10 @@ const Introduction = () => {
           Kamlesh Takhar
         </h1>
 
-        <p className='max-w-[700px] text-[#444] text-sm sm:text-base md:text-lg opacity-90'>
+        {/* <p className='max-w-[700px] text-[#444] text-sm sm:text-base md:text-lg opacity-90'>
           A result-oriented <span className='font-semibold text-[#333]'>Full Stack Web Developer</span>,
           building and managing end-to-end websites and web applications that drive the overall success of the product.
-        </p>
+        </p> */}
 
         <div className="flex flex-wrap gap-3 mt-2 text-sm sm:text-base">
           <a href="mailto:kamleshtakhar2783@gmail.com" className="flex items-center gap-2 hover:text-blue-600">
