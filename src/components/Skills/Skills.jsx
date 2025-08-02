@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaNodeJs, FaAws, FaGithub, FaJava } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs, SiExpress, SiSocketdotio, SiApollographql, SiMongodb, SiMysql, SiDocker } from 'react-icons/si';
+import { SiPostgresql } from 'react-icons/si';
 
 const skillData = [
   { name: "HTML", icon: <FaHtml5 className="text-4xl text-orange-600" /> },
@@ -18,6 +19,7 @@ const skillData = [
   { name: "RESTFUL API", icon: <SiApollographql className="text-4xl text-indigo-500" /> },
   { name: "MONGODB", icon: <SiMongodb className="text-4xl text-green-700" /> },
   { name: "MYSQL", icon: <SiMysql className="text-4xl text-blue-700" /> },
+    { name: "POSTGRESQL", icon: <SiPostgresql className="text-4xl text-blue-800" /> },
   { name: "AWS", icon: <FaAws className="text-4xl text-orange-500" /> },
   { name: "DOCKER", icon: <SiDocker className="text-4xl text-blue-500" /> },
   { name: "GITHUB", icon: <FaGithub className="text-4xl text-gray-900" /> },
