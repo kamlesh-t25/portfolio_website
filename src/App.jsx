@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Loader from './components/Loader.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import Skills from './components/Skills/Skills.jsx'
+import WorkExperience from './components/WorkExperience/WorkExperience.jsx'
 
 function App() {
   // useEffect(()=>{
@@ -58,6 +59,7 @@ function App() {
             <div className='bg-[#eceff1] '>
               <section id="introduction"><Introduction /></section>
               <section id="about-container"><About /></section>
+              <section id="experience-container"><WorkExperience /></section>
               <section id="skills-container"><Skills/></section>
               <section id="projects-container"><Projects /></section>
               <section id="contact"><Contact /></section>
