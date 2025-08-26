@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaNodeJs, FaAws, FaGithub, FaJava } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiExpress, SiSocketdotio, SiApollographql, SiMongodb, SiMysql, SiDocker } from 'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiExpress, SiSocketdotio, SiApollographql, SiMongodb, SiMysql,SiGo, SiDocker } from 'react-icons/si';
 import { SiPostgresql } from 'react-icons/si';
 
 const skillData = [
@@ -11,6 +11,7 @@ const skillData = [
   { name: "BOOTSTRAP", icon: <FaBootstrap className="text-4xl text-purple-600" /> },
   { name: "JAVASCRIPT", icon: <FaJs className="text-4xl text-yellow-500" /> },
   { name: "JAVA", icon: <FaJava className="text-4xl text-red-600" /> },
+  { name: "GO", icon: <SiGo className="text-4xl text-cyan-600" /> }, 
   { name: "REACT.JS", icon: <FaReact className="text-4xl text-blue-400 animate-spin-slow" /> },
   { name: "NEXT.JS", icon: <SiNextdotjs className="text-4xl text-black" /> },
   { name: "NODE.JS", icon: <FaNodeJs className="text-4xl text-green-600" /> },
