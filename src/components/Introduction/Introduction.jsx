@@ -13,9 +13,14 @@ const Introduction = () => {
       className='min-h-screen w-full bg-white font-sans flex justify-center items-center px-4'
     >
       <div className='flex flex-col gap-6 max-w-3xl w-full text-left'>
-        <p className='text-blue-900 mb-[-25px] font-semibold tracking-widest text-md sm:text-lg md:text-xl uppercase'>
-          Full Stack Developer
-        </p>
+        {/* <p className='text-blue-900 mb-[-25px] font-semibold tracking-widest text-md sm:text-lg md:text-xl uppercase'>
+          Software Engineer
+        </p> */}
+
+        <p className="text-[#7843E9] mb-[-25px] font-semibold tracking-widest text-md sm:text-lg md:text-xl uppercase">
+  Hey there! Glad you stopped by 👋
+</p>
+
         <h1 className='text-[#111] font-bold text-[30px] sm:text-[40px] md:text-[60px] leading-tight'>
           Kamlesh Takhar
         </h1>
